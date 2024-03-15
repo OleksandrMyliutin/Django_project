@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Сайт зоопарку</title>
+    <link rel="stylesheet" href="{%static 'css/style2.css'%}">
+    <link rel="websit icon" type="jpg" href="{%static 'WEb%20копия.jpg'%}">
+
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="navbar-content">Зоопарк "Сафарі"</div>
+    <ul id="navbar">
+        <a  href="{%url 'index' %}"><img class = pic1  src="{%static 'Drawings/11111.jpg'%}"  alt=""></a>
+        <li><a href="{%url 'index' %}">Головна</a></li>
+        <li><a href="#">Інфо</a>
+            <ul>
+                <li><a href="#">Для відвідувачей</a></li>
+                <li><a href="#">Персонал</a></li>
+            </ul>
+        </li>
+        <li><a href="{%url 'Test3' %}">Новини</a></li>
+        <li><a href="#">Контакти</a>
+            <ul>
+                <li><a href="#">Адреса</a></li>
+                <li><a href="#">Телефон</a></li>
+                <li><a href="#">Пошта</a></li>
+            </ul>
+        </li>
+        <li><a href="#">О нас</a></li>
+        <li>
+            <a class="Registr" >Заявка на групове відвідування</a>
+        </li>
+    </ul>
+</div>
+<br>
+
+<form onsubmit="return false" action="#" method="post" enctype="multipart/form-data">
+<div class="content">
+    <ul>
+        <br>
+        <li><label>Прізвисько <input  placeholder="* Ім'я" tabindex="1" name="username" type="text" class="textinput" required /></label></li>
+        <li><label>Номер телефону <input  placeholder="+380" tabindex="2" name="userphone" type="tel" class="textinput" pattern="[+][0-9]{12}" required/></label></li>
+        <li><label>Дата <input  type="date" tabindex="3" class="textinput" required></label></li>
+        <li><label ><p>Кількість людей в группі: <span id="demo"></span></p>
+            <input type="range" min="1" max="30" value="1"  id="myRange"></label></li>
+        <li><lable><p>Чи потрібен гід?</p>
+            <select>
+                <option value="Так">Так</option>
+                <option selected value="Ні">Ні</option>
+            </select></lable></li>
+    </ul>
+    <button id="Mybtn" class="textbutton" tabindex="4" >Отправить форму</button>
+    <button class="textbutton" tabindex="5" type="reset">Очистить</button>
+
+</div>
+
+</form>
+<div class="infocontent">
+    <span >Зоопарк Сафарі</span>
+    <br>Це не просто місце, де можна подивитись на тварин та птахів різних видів,<br> а й приємно провести час, адже тут на території є й дитячі ігрові майданчики, зелені куточки, тут сучасна та інфраструктура, з відтворенням фрагментів природного середовища, у якому мешкають звірі та птахи. А також всю територію прикрашають скульптурні зображення, які чудово вписуються у світлини відвідувачів.
+    <br>
+    <span><b>Здійснюйте прогулянки зоопарками разом з нашими гідами</b></span>, <br> для цього вам знадобиться заповнити форму для набору в групу.
+    <br> Виберіть дату, коли вам буде зручніше.
+    <br>
+    <br>
+    <span><b>Відвідайте наші нові вальєри з левами!</b></span> <br> А також новий контактний зоопарк для малюків.
+    Для цього вам знадобиться заповнити форму для набору в групу. Виберіть дату, коли вам буде зручніше.
+</div>
+
+<div id="openModal"  class="modal">
+    <div  class="modal-content">
+        <h3>Повідомлення!</h3>
+        <span id="clos" title="Close" class="close">&times;</span>
+        <div id="info-text">
+            Ваші дані записані, дякуємо!
+        </div>
+    </div>
+</div>
+<script src="{%static 'JS/script.js'%}"></script>
+</body>
+</html>

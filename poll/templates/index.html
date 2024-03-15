@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Сайт зоопарку</title>
+  <link rel="stylesheet" href="{%static 'css/style2.css'%}">
+  <link rel="websit icon" type="jpg" href="{%static 'WEb%20копия.jpg'%}">
+  <link rel="stylesheet" href="{%static 'css/slidet_style.css'%}">
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="navbar-content">
+      Зоопарк "Сафарі"
+    </div>
+    <ul id="navbar">
+      <a  href="{%url 'index' %}"><img class = pic1  src="{%static 'Drawings/11111.jpg'%}"  alt=""></a>
+      <li><a class="Registr">Головна</a></li>
+      <li><a href="#">Інфо</a>
+        <ul>
+          <li><a href="#">Для відвідувачей</a></li>
+          <li><a href="#">Персонал</a></li>
+        </ul>
+      </li>
+      <li><a href="{%url 'Test3' %}">Новини</a></li>
+      <li><a href="#">Контакти</a>
+        <ul>
+          <li><a href="#">Адреса</a></li>
+          <li><a href="#">Телефон</a></li>
+          <li><a href="#">Пошта</a></li>
+        </ul>
+      </li>
+      <li><a href="#">О нас</a></li>
+      </li>
+      <li>
+        <a  href="{%url 'Test2' %}">Заявка на групове відвідування</a>
+      </li>
+    </ul>
+  </div>
+
+  <br>
+ <br><br><br><br><br>
+ {%if name%}  
+  <div class="text_change">
+      Здраствуйте {{name}}!
+    </div>
+ {%endif%}  
+  <div class="slides-container">
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src="{%static 'Drawings/imgonline-com-ua-Resize-7C9bxEfskwlVk0.jpg'%}" style="width:100%" class="img_va">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src="{%static 'Drawings/imgonline-com-ua-Resize-3IgAxP9stZeZ7bAH.jpg'%}" style="width:100%" class="img_va">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src="{%static 'Drawings/imgonline-com-ua-Resize-BIAAh6xTelmwN5dp.jpg'%}" style="width:100%" class="img_va">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src="{%static 'Drawings/imgonline-com-ua-Resize-ZvAjEQ9uNK36.jpg'%}" style="width:100%" class="img_va">
+      </div>
+
+
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="{%static 'Drawings/imgonline-com-ua-Resize-7C9bxEfskwlVk0.jpg'%}" style="width:100%" onclick="currentSlide(1)" alt="Фламінго">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="{%static 'Drawings/imgonline-com-ua-Resize-3IgAxP9stZeZ7bAH.jpg'%}" style="width:100%" onclick="currentSlide(2)" alt="Капібара">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="{%static 'Drawings/imgonline-com-ua-Resize-BIAAh6xTelmwN5dp.jpg'%}" style="width:100%" onclick="currentSlide(3)" alt="Ігуана">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="{%static 'Drawings/imgonline-com-ua-Resize-ZvAjEQ9uNK36.jpg'%}" style="width:100%" onclick="currentSlide(4)" alt="Жираф">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 70px; margin-bottom: 150px" class="content2">
+
+    <p>Ласкаво просимо! </p>
+    <p>"Сафарі" - парк це ідеальне місце для відпочинку на свіжому повітрі,
+      з дітьми.</br> Тут можна посидіти в тіні дерев на лавочці, або в альтанці, послухати як співають зебри і павичі,
+      поспостерігати за витонченими піруетами водоплавних на ставку. При бажанні пригостити соломкою цікавого капуцина біля входу,
+      обійнятися з непосидющими гімалайськими ведмежатами, поговорити з папугами або просто пограти зі спритними єнотами. Загалом відмінно провести час."
+    </p>
+  </div>
+  <script src="{%static 'JS/style.js'%}">
+  </script>
+</body>
+</html>
